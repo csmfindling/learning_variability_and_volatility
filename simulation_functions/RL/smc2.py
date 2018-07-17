@@ -6,7 +6,6 @@ sys.path.append("../useful_functions/")
 import useful_functions as uf
 import warnings
 
-# td=td_list[0]; sample=theta; forced_actions = None;  beta_softmax=-1; apply_guided=0; apply_weber=1;apply_cst_noise=1; apply_inertie=1;nb_traj=1
 def simulate_noiseless_rl(td, rewards, sample, tau, nb_traj=1):
 	assert(nb_traj==1)
 	T                  = rewards.shape[-1]
@@ -19,7 +18,7 @@ def simulate_noiseless_rl(td, rewards, sample, tau, nb_traj=1):
 	performance        = np.zeros(T)
 	for t_idx in range(T):
 		if t_idx > 0.:
-			alpha    = sample[0] #sample[np.where(td['tau'][t_idx - 1] == vol_unique)[0][0]]
+			alpha    = sample[0]
 			prev_rew = rewards[:,t_idx - 1]
 				
 			if actions_simul[t_idx - 1] == 0:
