@@ -36,7 +36,5 @@ Once downloaded, open the compile_c.sh file. Modify it by adding your boost libr
 
 If you have any questions on this code or related, please do not hesitate to contact me: charles.findling(at)gmail.com
 
-<h3> References </h3>
-
 
 
